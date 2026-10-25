@@ -5,6 +5,7 @@ const PATHS = {
   right: <path d="M9 5l7 7-7 7" />,
   close: <path d="M6 6l12 12M18 6L6 18" />,
   menu: <path d="M4 7h16M9 12h11M4 17h16" />,
+  chevron: <path d="M6 9l6 6 6-6" />,
   check: <path d="M5 12.5l4.5 4.5L19 7.5" strokeWidth="2.2" />,
   phone: <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" />,
   mail: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></>,

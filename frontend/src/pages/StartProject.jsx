@@ -42,7 +42,7 @@ export default function StartProject() {
       </section>
 
       <div className="mt-[22px] grid items-start gap-[22px] min-[1000px]:grid-cols-[minmax(0,1fr)_340px]">
-        <div className="rounded-[22px] border border-line bg-paper p-[clamp(20px,3vw,34px)]">
+        <div id="project-form-wrap" className="rounded-[22px] border border-line bg-paper p-[clamp(20px,3vw,34px)]">
           <ProjectForm />
         </div>
 

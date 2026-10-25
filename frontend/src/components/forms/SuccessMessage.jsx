@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { CONTACT } from "../../data/content";
 import { copyText } from "../../utils/whatsapp";
 import { useToast } from "../ui/Toast";
@@ -6,13 +7,36 @@ import Icon from "../ui/Icon";
 // Thank-you screen shown after an enquiry is submitted.
 export default function SuccessMessage({ name, reference, message, link, summary = [], onClose, onReset, label = "enquiry" }) {
   const toast = useToast();
+  const rootRef = useRef(null);
+
+  useEffect(() => {
+    // Prevent screen jumping to footer when the tall form collapses
+    const timer = setTimeout(() => {
+      // If inside a scrollable modal container
+      const modalScroll = rootRef.current?.closest(".overflow-y-auto");
+      if (modalScroll) {
+        modalScroll.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+
+      // If on a regular page like /start-project
+      if (rootRef.current) {
+        const rect = rootRef.current.getBoundingClientRect();
+        const targetY = window.pageYOffset + rect.top - 100;
+        window.scrollTo({ top: Math.max(0, targetY), behavior: "smooth" });
+      }
+    }, 60);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const copy = async () => {
     const ok = await copyText(message);
     toast(ok ? "Details copied" : `Copy isn’t available here. Please email ${CONTACT.email}`);
   };
 
   return (
-    <div className="py-[clamp(10px,3vw,30px)] text-center">
+    <div ref={rootRef} className="py-[clamp(16px,4vw,36px)] text-center min-h-[420px] flex flex-col justify-center">
       <span className="mx-auto grid h-[76px] w-[76px] place-items-center rounded-full bg-violet-grad text-white shadow-[0_18px_40px_-18px_rgba(109,63,192,.8)]">
         <Icon name="check" className="h-9 w-9" />
       </span>

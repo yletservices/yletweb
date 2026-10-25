@@ -1,13 +1,13 @@
 // Form definitions. Field types: text | email | tel | select | chips | textarea
 
 export const COUNTRY_CODES = [
-  { value: "+91", label: "IN +91" },
-  { value: "+1", label: "US +1" },
-  { value: "+44", label: "UK +44" },
-  { value: "+971", label: "AE +971" },
-  { value: "+966", label: "SA +966" },
-  { value: "+65", label: "SG +65" },
-  { value: "+61", label: "AU +61" },
+  { value: "+91", label: "+91", country: "India", flag: "🇮🇳" },
+  { value: "+1", label: "+1", country: "USA", flag: "🇺🇸" },
+  { value: "+44", label: "+44", country: "UK", flag: "🇬🇧" },
+  { value: "+971", label: "+971", country: "UAE", flag: "🇦🇪" },
+  { value: "+966", label: "+966", country: "Saudi Arabia", flag: "🇸🇦" },
+  { value: "+65", label: "+65", country: "Singapore", flag: "🇸🇬" },
+  { value: "+61", label: "+61", country: "Australia", flag: "🇦🇺" },
 ];
 
 export const ENQUIRY_FORMS = {

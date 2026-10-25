@@ -84,6 +84,12 @@ export default function EnquiryForm({ definition, formKey, onClose }) {
     } finally {
       setSubmitting(false);
       setDone({ name: (values.name || "").trim().split(" ")[0], message, link });
+      setTimeout(() => {
+        const modalScroll = document.querySelector(".overflow-y-auto");
+        if (modalScroll) {
+          modalScroll.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }, 50);
     }
   };
 

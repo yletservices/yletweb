@@ -1,5 +1,7 @@
 import { COUNTRY_CODES } from "../../data/forms";
 import Icon from "../ui/Icon";
+import CustomSelect from "../ui/CustomSelect";
+import CountryCodeSelect from "../ui/CountryCodeSelect";
 
 // Renders one form field from a definition object (see data/forms.js).
 // values / errors are plain objects keyed by field name; onChange(name, value).
@@ -35,10 +37,18 @@ export default function FormField({ field, values, errors, onChange, onBlur, idP
     return (
       <div className={`field ${full}`}>
         <label htmlFor={id}>{field.label}{tag}</label>
-        <div className="grid grid-cols-[110px_minmax(0,1fr)] gap-2">
-          <select aria-label="Country code" className="input" value={values.countryCode || "+91"} onChange={(e) => onChange("countryCode", e.target.value)}>
-            {COUNTRY_CODES.map((c) => <option key={c.value} value={c.value}>{c.label}</option>)}
-          </select>
+        <div
+          className={`relative flex w-full items-center rounded-xl border-[1.5px] border-line bg-white transition focus-within:border-violet focus-within:ring-4 focus-within:ring-violet/15 ${
+            error ? "bad" : ""
+          }`}
+        >
+          {/* Custom Dynamic Country Code Selector */}
+          <CountryCodeSelect
+            value={values.countryCode || "+91"}
+            onChange={(val) => onChange("countryCode", val)}
+          />
+
+          {/* Phone Number Input */}
           <input
             id={id}
             type="tel"
@@ -46,7 +56,7 @@ export default function FormField({ field, values, errors, onChange, onBlur, idP
             autoComplete="tel-national"
             maxLength={15}
             placeholder="98765 43210"
-            className={`input ${error ? "bad" : ""}`}
+            className="w-full rounded-r-[10px] bg-transparent px-3.5 py-3 text-[15.5px] text-espresso placeholder:text-[#B4A79C] focus:outline-none"
             value={values[field.name] || ""}
             onChange={(e) => onChange(field.name, e.target.value.replace(/[^\d\s]/g, ""))}
             onBlur={() => onBlur?.(field)}
@@ -62,10 +72,19 @@ export default function FormField({ field, values, errors, onChange, onBlur, idP
     return (
       <div className={`field ${full}`}>
         <label htmlFor={id}>{field.label}{tag}</label>
-        <select id={id} className={`input ${error ? "bad" : ""}`} value={values[field.name] || ""} onChange={(e) => onChange(field.name, e.target.value)} aria-invalid={Boolean(error)}>
-          <option value="">Select an option</option>
-          {field.options.map((o) => <option key={o}>{o}</option>)}
-        </select>
+        <CustomSelect
+          id={id}
+          name={field.name}
+          value={values[field.name] || ""}
+          onChange={(val) => {
+            onChange(field.name, val);
+            onBlur?.(field);
+          }}
+          options={field.options}
+          placeholder="Select an option"
+          error={error}
+          ariaInvalid={Boolean(error)}
+        />
         {error && <span className="err">{error}</span>}
       </div>
     );

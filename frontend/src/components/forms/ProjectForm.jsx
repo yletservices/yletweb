@@ -101,6 +101,12 @@ export default function ProjectForm() {
         values.budget && ["Budget", values.budget], values.timeline && ["Start", values.timeline], ["Contact via", values.via],
       ].filter(Boolean);
       setDone({ name: values.name.trim().split(" ")[0], summary, message, link });
+      setTimeout(() => {
+        const formCard = document.getElementById("project-form-wrap");
+        if (formCard) {
+          formCard.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 50);
     }
   };
 
