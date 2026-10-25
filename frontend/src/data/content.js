@@ -10,7 +10,7 @@ export const CONTACT = {
 
 export const SOCIALS = [
   { name: "LinkedIn", url: "" },
-  { name: "Instagram", url: "" },
+  { name: "Instagram", url: "https://www.instagram.com/yletservices" },
   { name: "YouTube", url: "" },
   { name: "Behance", url: "" },
 ];
