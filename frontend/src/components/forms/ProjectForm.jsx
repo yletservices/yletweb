@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { BUDGETS, PROJECT_OPTIONS, START_TIMES } from "../../data/forms";
 import { validateEmail, validateName, validatePhone, validateRequiredChoice } from "../../utils/validation";
 import { makeReference, whatsappLink } from "../../utils/whatsapp";
+import { sendLeadEmail } from "../../utils/email";
 import FormField from "./FormField";
 import ContactMethod from "./ContactMethod";
 import SuccessMessage from "./SuccessMessage";
@@ -26,6 +27,7 @@ export default function ProjectForm() {
   const [values, setValues] = useState(INITIAL);
   const [errors, setErrors] = useState({});
   const [done, setDone] = useState(null);
+  const [submitting, setSubmitting] = useState(false);
   const [reference, setReference] = useState(makeReference);
 
   const set = (name, value) => {
@@ -60,20 +62,46 @@ export default function ProjectForm() {
   }, [values, reference]);
   const link = whatsappLink(message);
 
-  const submit = (e) => {
+  const submit = async (e) => {
+    e?.preventDefault();
     const errs = validate();
     setErrors(errs);
     if (Object.values(errs).some(Boolean)) {
-      e.preventDefault();
       document.querySelector('#project-form [aria-invalid="true"], #project-form .err')?.scrollIntoView({ block: "center", behavior: "smooth" });
       return;
     }
-    const summary = [
-      ["Name", values.name], ["Mobile", `${values.countryCode} ${values.phone}`], ["Email", values.email],
-      values.company && ["Company", values.company], ["Services", values.services.join(", ")],
-      values.budget && ["Budget", values.budget], values.timeline && ["Start", values.timeline], ["Contact via", values.via],
-    ].filter(Boolean);
-    setTimeout(() => setDone({ name: values.name.trim().split(" ")[0], summary, message, link }), 350);
+
+    setSubmitting(true);
+    try {
+      const cleanPhone = `${values.countryCode || "+91"}${(values.phone || "").replace(/\D/g, "")}`;
+      const waNum = `${(values.countryCode || "+91").replace(/\D/g, "")}${(values.phone || "").replace(/\D/g, "")}`;
+
+      await sendLeadEmail({
+        form_type: "Start a Project Enquiry",
+        name: values.name.trim(),
+        business: values.company.trim() || "-",
+        phone: `${values.countryCode || "+91"} ${values.phone.trim()}`,
+        clean_phone: cleanPhone,
+        whatsapp_num: waNum,
+        email: values.email.trim(),
+        via: values.via || "WhatsApp",
+        needs: values.services.join(", ") || "-",
+        budget: values.budget || "-",
+        timeline_or_goal: values.timeline || "-",
+        extra_info: values.company || "-",
+        message: values.description.trim() || "No additional message.",
+      });
+    } catch (err) {
+      console.error("Email send failed:", err);
+    } finally {
+      setSubmitting(false);
+      const summary = [
+        ["Name", values.name], ["Mobile", `${values.countryCode} ${values.phone}`], ["Email", values.email],
+        values.company && ["Company", values.company], ["Services", values.services.join(", ")],
+        values.budget && ["Budget", values.budget], values.timeline && ["Start", values.timeline], ["Contact via", values.via],
+      ].filter(Boolean);
+      setDone({ name: values.name.trim().split(" ")[0], summary, message, link });
+    }
   };
 
   if (done) {
@@ -92,7 +120,7 @@ export default function ProjectForm() {
   const toggleService = (key) => set("services", values.services.includes(key) ? values.services.filter((s) => s !== key) : [...values.services, key]);
 
   return (
-    <form id="project-form" noValidate onSubmit={(e) => e.preventDefault()}>
+    <form id="project-form" noValidate onSubmit={submit}>
       {/* 1. Details */}
       <section>
         <SectionTitle n="1" hint="So we know who to contact.">Your details</SectionTitle>
@@ -159,10 +187,16 @@ export default function ProjectForm() {
       </section>
 
       <div className="mt-[26px] flex flex-col gap-2.5">
-        <a href={link} target="_blank" rel="noopener noreferrer" role="button" onClick={submit} className="btn btn-violet min-h-[56px] w-full rounded-[14px] text-[15.5px]">
-          Submit Project Enquiry <Icon name="arrow" />
-        </a>
-        <small className="text-center text-[12.5px] text-muted">By submitting, your enquiry is sent to the Ylet team on WhatsApp (+91 85200 70112).</small>
+        <button
+          type="submit"
+          disabled={submitting}
+          className="btn btn-violet min-h-[56px] w-full rounded-[14px] text-[15.5px] disabled:opacity-75 disabled:cursor-not-allowed"
+        >
+          {submitting ? "Sending Project Enquiry..." : "Submit Project Enquiry"} <Icon name="arrow" />
+        </button>
+        <small className="text-center text-[12.5px] text-muted">
+          By submitting, your enquiry is delivered directly to the Ylet team. We reply within one working day.
+        </small>
       </div>
     </form>
   );

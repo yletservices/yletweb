@@ -19,7 +19,7 @@ export default function SuccessMessage({ name, reference, message, link, summary
       <h2 className="mt-[18px] text-2xl md:text-[32px]">Thank you, {name}!</h2>
       {reference && <span className="mt-2.5 inline-block rounded-full bg-lav px-3 py-2 text-xs font-semibold tracking-[.14em] text-violet">Reference {reference}</span>}
       <p className="mx-auto mt-3.5 max-w-[52ch]">
-        WhatsApp has opened in a new tab with your {label} filled in. Tap <b>Send</b> there to deliver it to the Ylet team, and we’ll contact you within one working day.
+        We have received your {label} and our team has been notified. We’ll review your details and reach out within one working day.
       </p>
 
       {summary.length > 0 && (
@@ -35,7 +35,7 @@ export default function SuccessMessage({ name, reference, message, link, summary
 
       <div className="mt-[22px] flex flex-wrap justify-center gap-2.5">
         <a className="btn btn-violet" href={link} target="_blank" rel="noopener noreferrer">
-          <Icon name="whatsapp" /> Open WhatsApp again
+          <Icon name="whatsapp" /> Also Chat on WhatsApp
         </a>
         <button type="button" className="btn btn-line" onClick={copy}>Copy details</button>
         {onReset && <button type="button" className="btn btn-line" onClick={onReset}>New enquiry</button>}
