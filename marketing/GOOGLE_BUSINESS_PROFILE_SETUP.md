@@ -13,8 +13,8 @@
 | **Secondary Categories** | `Software Company`, `Website Designer`, `Internet Marketing Service`, `Computer Support and Services` |
 | **Service Area** | Hyderabad, Secunderabad, Cyberabad, Telangana, and Pan-India |
 | **Phone Number** | `+91 85200 70112` |
-| **Website URL** | `https://yletweb.vercel.app` |
-| **Appointment Link** | `https://yletweb.vercel.app/start-project` |
+| **Website URL** | `https://yletservices.com` |
+| **Appointment Link** | `https://yletservices.com/start-project` |
 | **Opening Hours** | Monday – Saturday: 10:00 AM – 7:00 PM (Sunday Closed) |
 
 ---
@@ -35,7 +35,7 @@ At Ylet, one dedicated team handles strategy, design, development, launch, and o
 📍 Hyderabad, Telangana, India
 📞 Call / WhatsApp: +91 85200 70112
 📧 Email: yletservices@gmail.com
-🌐 https://yletweb.vercel.app
+🌐 https://yletservices.com
 ```
 
 ---

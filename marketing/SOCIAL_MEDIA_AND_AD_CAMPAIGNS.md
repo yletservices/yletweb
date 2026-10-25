@@ -11,7 +11,7 @@ Ylet — Digital Marketing & IT Solutions
 ⚡ Ideas into impact | Create · Capture · Build
 📍 Hyderabad, India · Serving Clients Worldwide
 👇 Book your free consultation today!
-yletweb.vercel.app/start-project
+yletservices.com/start-project
 ```
 **Recommended Instagram Story Highlights:**
 1. `Services` — 4 slides highlighting Websites, Apps, Marketing, and IT Solutions.
@@ -37,7 +37,7 @@ Key Capabilities:
 • Enterprise IT Solutions (Custom CRM/ERP, Automation, Cloud & Maintenance)
 
 Connect with us:
-🌐 https://yletweb.vercel.app
+🌐 https://yletservices.com
 📧 yletservices@gmail.com
 📞 +91 85200 70112
 ```
@@ -72,10 +72,10 @@ Use these pre-tested headlines (< 30 characters) and descriptions (< 90 characte
 4. `Transform your brand with Ylet. Native mobile apps, custom web platforms & 24/7 IT support.` (89 chars)
 
 ### 🔗 Sitelink Extensions
-- **Sitelink 1:** Start a Project (`yletweb.vercel.app/start-project`) — *Tell us your requirements & get a custom quote within 24h.*
-- **Sitelink 2:** Website Development (`yletweb.vercel.app/#services`) — *Fast, SEO-optimized business websites & e-commerce stores.*
-- **Sitelink 3:** Mobile Apps (`yletweb.vercel.app/#services`) — *Intuitive Android & iOS mobile applications built to scale.*
-- **Sitelink 4:** Free Consultation (`yletweb.vercel.app/start-project`) — *No obligation. Speak directly with our lead tech strategist.*
+- **Sitelink 1:** Start a Project (`yletservices.com/start-project`) — *Tell us your requirements & get a custom quote within 24h.*
+- **Sitelink 2:** Website Development (`yletservices.com/#services`) — *Fast, SEO-optimized business websites & e-commerce stores.*
+- **Sitelink 3:** Mobile Apps (`yletservices.com/#services`) — *Intuitive Android & iOS mobile applications built to scale.*
+- **Sitelink 4:** Free Consultation (`yletservices.com/start-project`) — *No obligation. Speak directly with our lead tech strategist.*
 
 ---
 
@@ -96,7 +96,7 @@ Here is what you get when partnering with Ylet:
 Don't let tech hurdles hold your business back.
 
 👉 Click below to claim your FREE project consultation & proposal!
-🔗 https://yletweb.vercel.app/start-project
+🔗 https://yletservices.com/start-project
 ```
 
 ### Angle B: Problem-Agitate-Solve (For Startups & Retailers)
@@ -113,7 +113,7 @@ Meet Ylet — your full-cycle IT and marketing partner.
 One point of contact. Clear milestones. Transparent pricing.
 
 Ready to build something extraordinary?
-Get in touch today: https://yletweb.vercel.app/start-project
+Get in touch today: https://yletservices.com/start-project
 ```
 
 ---
@@ -132,7 +132,7 @@ I came across [Company Name] while researching growing businesses in [City/Indus
 
 While reviewing your online presence, I noticed a couple of quick opportunities on your website that could significantly improve mobile load speed and help convert more visitors into direct phone enquiries.
 
-At Ylet (https://yletweb.vercel.app), we help businesses design modern, ultra-fast websites, mobile apps, and search campaigns that consistently deliver results.
+At Ylet (https://yletservices.com), we help businesses design modern, ultra-fast websites, mobile apps, and search campaigns that consistently deliver results.
 
 Would you be open to a quick 10-minute call this week? I’d be happy to share 3 specific, no-obligation recommendations you can implement right away.
 
@@ -141,7 +141,7 @@ Best regards,
 VVN Satya Sai
 Founder | Ylet — Digital Marketing & IT Solutions
 📞 +91 85200 70112 | 📧 yletservices@gmail.com
-🌐 https://yletweb.vercel.app
+🌐 https://yletservices.com
 ```
 
 ### 📧 Template 2: The "Performance Marketing / Lead Gen" Pitch

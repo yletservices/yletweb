@@ -2,9 +2,9 @@
 
 > **Developer Name:** Ylet  
 > **Contact Email:** yletservices@gmail.com  
-> **Official Website:** [https://yletweb.vercel.app](https://yletweb.vercel.app)  
-> **Privacy Policy URL:** [https://yletweb.vercel.app/privacy](https://yletweb.vercel.app/privacy)  
-> **Terms of Service URL:** [https://yletweb.vercel.app/terms](https://yletweb.vercel.app/terms)  
+> **Official Website:** [https://yletservices.com](https://yletservices.com)  
+> **Privacy Policy URL:** [https://yletservices.com/privacy](https://yletservices.com/privacy)  
+> **Terms of Service URL:** [https://yletservices.com/terms](https://yletservices.com/terms)  
 
 ---
 
@@ -71,7 +71,7 @@ Ready to turn your vision into impact? Download the Ylet app or visit our portal
 📍 Headquarters: Hyderabad, Telangana, India
 📧 Email: yletservices@gmail.com
 📞 Phone / WhatsApp: +91 85200 70112
-🌐 Website: https://yletweb.vercel.app
+🌐 Website: https://yletservices.com
 ```
 
 ---

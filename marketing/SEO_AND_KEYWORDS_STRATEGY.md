@@ -1,6 +1,6 @@
 # Ylet — Comprehensive SEO & Keyword Strategy Playbook
 
-> **Target Domain:** [https://yletweb.vercel.app](https://yletweb.vercel.app)  
+> **Target Domain:** [https://yletservices.com](https://yletservices.com)  
 > **Primary Region:** Hyderabad, Telangana, India  
 > **Secondary Regions:** Pan-India & Global Remote Clients  
 > **Core Verticals:** Web Development, Mobile Apps, Digital Marketing, Custom IT Solutions  
@@ -39,7 +39,7 @@ These searchers have immediate commercial intent to hire an agency in Hyderabad:
 ### A. Meta Title & Description Formulas
 - **Homepage Title:** `Ylet | IT & Marketing` (or `Ylet — Digital Marketing & IT Solutions | Hyderabad`)
 - **Homepage Description:** `Ylet is a Hyderabad-based digital marketing and IT solutions company specializing in custom website development, mobile apps, performance marketing, SEO, and enterprise software.`
-- **Canonical URL:** `<link rel="canonical" href="https://yletweb.vercel.app/" />`
+- **Canonical URL:** `<link rel="canonical" href="https://yletservices.com/" />`
 - **Heading Hierarchy:**
   - One unique `<h1>` per page.
   - Semantic `<h2>` for core sections (`#services`, `#about`, `#work`, `#why`, `#contact`).
@@ -48,10 +48,10 @@ These searchers have immediate commercial intent to hire an agency in Hyderabad:
 ### B. Robots.txt & Sitemap.xml
 - `robots.txt` is active at `/robots.txt` allowing all search crawlers.
 - `sitemap.xml` is active at `/sitemap.xml` with weekly refresh and prioritized URLs:
-  - `https://yletweb.vercel.app/` (Priority 1.0)
-  - `https://yletweb.vercel.app/start-project` (Priority 0.9)
-  - `https://yletweb.vercel.app/privacy` (Priority 0.5)
-  - `https://yletweb.vercel.app/terms` (Priority 0.5)
+  - `https://yletservices.com/` (Priority 1.0)
+  - `https://yletservices.com/start-project` (Priority 0.9)
+  - `https://yletservices.com/privacy` (Priority 0.5)
+  - `https://yletservices.com/terms` (Priority 0.5)
 
 ### C. Schema.org JSON-LD Structured Data
 Implemented directly in `<head>` of `index.html`:
@@ -73,7 +73,7 @@ Local Map Pack (Google Maps 3-Pack) drives over 45% of local commercial clicks i
    - Ask every satisfied client to leave a Google review containing strategic keywords:
      > *"Ylet built an incredible responsive website and managed our digital marketing in Hyderabad. Highly recommend VVN Satya Sai and his team!"*
 3. **Weekly Google Business Posts:**
-   - Share 1 portfolio update per week linking to `https://yletweb.vercel.app/start-project`.
+   - Share 1 portfolio update per week linking to `https://yletservices.com/start-project`.
 
 ---
 
