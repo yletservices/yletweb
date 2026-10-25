@@ -17,7 +17,7 @@ export default function Home() {
   useReveal();
 
   useEffect(() => {
-    document.title = "Ylet — Digital Marketing & IT Solutions";
+    document.title = "Ylet | IT & Marketing";
   }, []);
 
   // Scroll to /#section when arriving from another page or a shared link.
