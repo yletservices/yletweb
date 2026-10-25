@@ -5,6 +5,8 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
 import StartProject from "./pages/StartProject";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
@@ -16,6 +18,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/start-project" element={<StartProject />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

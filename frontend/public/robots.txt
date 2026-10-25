@@ -1,0 +1,8 @@
+# Robots.txt for Ylet — Digital Marketing & IT Solutions
+# Website: https://yletweb.vercel.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://yletweb.vercel.app/sitemap.xml

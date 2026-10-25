@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { CONTACT, FOOTER_LINKS, SERVICES, SOCIALS } from "../../data/content";
 import useSectionNav from "../../hooks/useSectionNav";
 import { useToast } from "../ui/Toast";
@@ -106,8 +107,8 @@ export default function Footer() {
           <div className="mt-8 flex flex-col items-start gap-1 border-t border-[#E7DCCF]/15 py-[18px] pb-5 text-[13px] text-[#BFB2A5] sm:flex-row sm:flex-wrap sm:items-center sm:justify-between md:mt-11">
             <span>© {new Date().getFullYear()} Ylet. All rights reserved.</span>
             <nav aria-label="Legal" className="flex flex-wrap gap-6">
-              <a href="#footer" onClick={soon("The Privacy Policy page")} className="py-2 transition hover:text-gold-light">Privacy Policy</a>
-              <a href="#footer" onClick={soon("The Terms & Conditions page")} className="py-2 transition hover:text-gold-light">Terms &amp; Conditions</a>
+              <Link to="/privacy" className="py-2 transition hover:text-gold-light">Privacy Policy</Link>
+              <Link to="/terms" className="py-2 transition hover:text-gold-light">Terms &amp; Conditions</Link>
             </nav>
           </div>
         </div>
