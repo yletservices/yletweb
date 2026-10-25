@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Production build
+dist/
+frontend/dist/
+
+# Env & local settings
+.env
+.env.*
+.DS_Store
+Thumbs.db
+*.log
